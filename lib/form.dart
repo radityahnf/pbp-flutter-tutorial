@@ -126,7 +126,12 @@ class _MyFormPageState extends State<MyFormPage> {
                         });
                       },
                     ),
-                    ListTile(
+                    
+                  ],
+                  
+                ),
+              ),
+              ListTile(
                       leading: const Icon(Icons.co_present),
                       title: Row(
                         children: [
@@ -209,22 +214,24 @@ class _MyFormPageState extends State<MyFormPage> {
                                         child: Column(
                                           children: [
                                             SizedBox(height: 20),
-                                            Text('Nama Lengkap: ' +
-                                                _namaLengkap),
+                                            Text('Nama Lengkap: $_namaLengkap'),
                                             SizedBox(height: 20),
-                                            Text('Jenjang: ' +
-                                                (jenjangSarjana == true
+                                            Text('Jenjang: ${jenjangSarjana == true
                                                     ? 'Sarjana'
                                                     : (jenjangDiploma == true
                                                         ? 'Diploma'
                                                         : (jenjangMagister ==
                                                                 true
                                                             ? 'Magister'
-                                                            : 'Doktor')))),
+                                                            : 'Doktor'))}'),
                                             SizedBox(height: 20),
-                                            Text('Umur: ' + umur.toString()),
+                                            Text('Umur: $umur'),
                                             SizedBox(height: 20),
-                                            Text('Kelas: ' + kelasPBP),
+                                            Text('Kelas: $kelasPBP'),
+                                            SizedBox(
+                                              height: 20,
+                                            ),
+                                            Text('Practice Mode: ${_nilaiSwitch == true ? 'On' : 'Off'}'),
                                             SizedBox(
                                               height: 20,
                                             ),
@@ -247,9 +254,6 @@ class _MyFormPageState extends State<MyFormPage> {
                         }
                       },
                     ),
-                  ],
-                ),
-              ),
             ],
           ),
         )),
